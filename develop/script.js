@@ -8,7 +8,7 @@ $(function () {
     //this is the event listener that catches on what save button the user clicked, then it logs the hour by value and input.
     $('.saveBtn').on("click", function(){
         //this collects the click hour number by it's ID value, I removed the hour for simplicity.
-        var chronos = $(this).parent().attr('id').split('hour')[1];
+        var chronos = $(this).parent().attr('id').split('hour0')[1];
         //this collects the user input
         var logos = $(this).siblings('.input').val().trim();
         
@@ -55,7 +55,7 @@ $(function () {
     var inputRetrieve = (function (){
     for (var i= 5; i < 13; i++) {
         let inputEl= $('.setTime');
-        inputEl.children('.input').text(localStorage.getItem[i]);
+        inputEl.children('.input').text(localStorage.getItem(i));
         
     }})
     
