@@ -48,16 +48,16 @@ $(function () {
     }
     })
     }
-
-    // TODO: Add code to get any user input that was saved in localStorage and set
-    // the values of the corresponding textarea elements. HINT: How can the id
-    // attribute of each time-block be used to do this?
+    
+    //this creates the object from where the function will iterate 
+    //and compare to select the right place to display the user input.
+    var inputElements = document.querySelectorAll("textarea");
     var inputRetrieve = (function (){
-    for (var i= 5; i < 13; i++) {
-        let inputEl= $('.setTime');
-        inputEl.children('.input').text(localStorage.getItem(i));
-        
-    }})
+        for (var i= 5; i < 13; i++) {
+        inputElements[i-5].value = localStorage.getItem(i)
+        }})
+    
+        console.log(inputElements);
     
     //this loops the functions.
     trackTime();

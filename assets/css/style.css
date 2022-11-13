@@ -1,20 +1,24 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    background: rgb(170, 224, 226);
   }
   
+
   textarea {
     background: transparent;
     border: none;
     resize: none;
     color: #000000;
-    border-left: 1px solid black;
     padding: 10px;
+    border:2px solid black;
   }
   
   /*Modified the dayJs*/
   #currentDay{
-    color: red;
+    color: rgb(44, 160, 238);
+    font-size: 40px;
+    text-decoration: underline;
   }
 
   .description {
@@ -54,12 +58,18 @@ body {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #06aed5;
-    color: white;
+    background-color: #2a8a97;
+    color: rgb(84, 209, 209);
   }
   
   .saveBtn i:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
   }
-  
+
+.hour {
+  background-color: #2a8a97;
+  color: rgb(198, 226, 226);
+  border-radius: 8px 4px 4px 8px;
+}
+
