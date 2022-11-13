@@ -2,21 +2,20 @@
 $(function () {
     //this sets the clock on the website by using the id and then using dayJs format I gave it the same style as the mock-up.
     var today = dayjs();
-    var chronos;
-    var logos;
-    
+        
     $('#currentDay').text(today.format('dddd MMMM DD, YYYY'));
 
     //this is the event listener that catches on what save button the user clicked, then it logs the hour by value and input.
     $('.saveBtn').on("click", function(){
         //this collects the click hour number by it's ID value, I removed the hour for simplicity.
-        chronos = $(this).parent().attr('id').split('hour')[1];
+        var chronos = $(this).parent().attr('id').split('hour')[1];
         //this collects the user input
-        logos = $(this).siblings('.input').val().trim();
+        var logos = $(this).siblings('.input').val().trim();
         
         //this should save the hour and input 
         localStorage.setItem(chronos, logos);
         console.log(chronos, logos);
+
     })
     
     //this function tracks the time and compares it to the id time to give it the proper color from css. 
@@ -49,6 +48,7 @@ $(function () {
     }
     })
     }
+
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
     // attribute of each time-block be used to do this?
