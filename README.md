@@ -34,7 +34,7 @@
 
 ## Visuals
 
-This is the screenshot of the full-size Quiz in full display of scoreboard, questions and timer.
+This is the screenshot of the full-size website.
     
 ![alt fullsite](./assets/images/screenshotfullsite.jpg)
     
