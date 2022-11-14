@@ -29,7 +29,7 @@
 ## Access
 
 - The link to my Github repository: https://github.com/EvolanGIT/Daily-Organizer
-- The launched website: 
+- The launched website: https://evolangit.github.io/Daily-Organizer/
 
 
 ## Visuals
