@@ -11,9 +11,9 @@ $(function () {
         var chronos = $(this).parent().attr('id').split('hour0')[1];
         //this collects the user input
         var logos = $(this).siblings('.input').val().trim();
-        
+        var getItem = localStorage.getItem(chronos);
         //this should save the hour and input 
-        localStorage.setItem(chronos, logos);
+        localStorage.setItem(chronos,getItem+' '+logos);
         console.log(chronos, logos);
 
     })
@@ -49,12 +49,13 @@ $(function () {
     })
     }
     
+    
     //this creates the object from where the function will iterate 
     //and compare to select the right place to display the user input.
     var inputElements = document.querySelectorAll("textarea");
     var inputRetrieve = (function (){
         for (var i= 5; i < 13; i++) {
-        inputElements[i-5].value = localStorage.getItem(i)
+        inputElements[i-5].value = localStorage.getItem(i);
         }})
     
         console.log(inputElements);
